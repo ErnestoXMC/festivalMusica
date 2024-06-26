@@ -1,0 +1,109 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.contenedor-boletos{
+    background-color: v.$verde;
+    padding-bottom: 8rem;
+    h3{
+        color: v.$blanco;
+    }
+    .boletos{
+        @include m.contenedor;
+        @include m.tablet{
+            @include m.grid(2);
+        }
+    }
+}
+.pase{
+    transition: transform .3s ease-in-out;
+    &:hover{
+        transform: scale(1.05);
+    }
+    &-nombre{
+        font-size: 3.5rem;
+        font-weight: 900;
+        text-align: center;
+        color: v.$blanco;
+    }
+    &-header, &-footer{
+        padding: .5rem;
+        p{
+            text-align: center;
+            color: v.$blanco;
+            margin: 0;
+        }
+    }
+    &-header{
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem;
+        background-color: v.$rosa;
+        p{
+            padding: 1rem 0;
+            text-transform: uppercase;
+            font-size: 2.2rem;
+        }
+    }
+    &-body{
+        background-color: v.$blanco;
+            ul{
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                li{
+                    padding: 2rem;
+                    border-bottom: 1px solid gainsboro;
+                }
+            }
+    }
+    &-footer{
+        background-color: v.$blanco;
+        padding: 3rem;
+        border-bottom-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+        p{
+            font-size: 2.8rem;
+            font-weight: 900;
+            background-color: v.$morado;
+            border-radius: 1rem;
+            padding: 1rem 0;
+            cursor: pointer;
+            transition: background-color .3s ease-in-out;
+            &:hover{
+                background-color: darken(v.$morado, 20%);
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
